@@ -9,7 +9,7 @@ const ContactForm: FC = () => {
                 <input type="hidden" name="bot-field" />
                 <input type="hidden" name="form-name" value="contact" />
                   <div className="mb-6">
-                    <label className="text-white" for="contact-name">Name: </label>
+                    <label className="text-white" htmlFor="contact-name">Name: </label>
                      <input
                         required
                         id="contact-name"
@@ -29,7 +29,7 @@ const ContactForm: FC = () => {
                         />
                   </div>
                   <div className="mb-6">
-                  <label className="text-white" for="contact-email">Email: </label>
+                  <label className="text-white" htmlFor="contact-email">Email: </label>
                      <input
                         required
                         id="contact-email"
@@ -49,7 +49,7 @@ const ContactForm: FC = () => {
                         />
                   </div>
                   <div className="mb-6">
-                  <label className="text-white" for="contact-message">Message: </label>
+                  <label className="text-white" htmlFor="contact-message">Message: </label>
                      <textarea
                         required
                         id="contact-message"

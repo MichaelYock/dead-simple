@@ -24,11 +24,11 @@ const Pricing: FC =() => {
             <h4 className="mb-2 text-2xl font-bold font-heading">Monthly</h4>
             <span className="text-6xl font-bold">$200</span>
             <span className="text-gray-400 text-xs">/month</span>
-            <p className="mt-3 mb-6 text-gray-500 leading-loose">Nullam diam arcu, sodales quis convallis sit amet, sagittis varius ligula.</p>
+            <p className="mt-3 mb-6 text-gray-500 leading-loose">$0 down for a standard 5 page small business website. No minimum contract, no cancelation fees.</p>
             <ul className="mb-6 text-gray-500">
               <li className="mb-2 flex">
               <Ticksvg />
-                <span>Up to 6 Pages</span>
+                <span>Up to 5 Pages</span>
               </li>
               <li className="mb-2 flex">
               <Ticksvg />
@@ -48,7 +48,6 @@ const Pricing: FC =() => {
               </li>
             </ul>
             <CalendlyLink text="Get Started" />
-            {/* <a className="inline-block text-center py-2 px-4 w-full rounded-l-xl rounded-t-xl bg-teal-500 hover:opacity-75 text-white font-bold leading-loose transition duration-200" href="#">Get Started</a> */}
           </div>
         </div>
       </div>
