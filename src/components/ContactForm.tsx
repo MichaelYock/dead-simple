@@ -35,6 +35,7 @@ const ContactForm: FC = () => {
                     <label className="text-white" htmlFor="contact-name">Name: </label>
                      <input
                         required
+                        name="contact-name"
                         id="contact-name"
                         type="text"
                         placeholder="Your Name"
@@ -55,6 +56,7 @@ const ContactForm: FC = () => {
                   <label className="text-white" htmlFor="contact-email">Email: </label>
                      <input
                         required
+                        name="contact-email"
                         id="contact-email"
                         type="email"
                         placeholder="Your Email"
@@ -75,6 +77,7 @@ const ContactForm: FC = () => {
                   <label className="text-white" htmlFor="contact-message">Message: </label>
                      <textarea
                         required
+                        name="contact-message"
                         id="contact-message"
                         rows={4}
                         placeholder="Your Message"
