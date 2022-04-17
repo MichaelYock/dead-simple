@@ -1,11 +1,34 @@
-import React, {FC} from 'react';
+import React, {FC, useEffect} from 'react';
+
+const isBrowser = typeof window !== "undefined"
 
 const ContactForm: FC = () => {
+   if (isBrowser) {
+      useEffect(() => {
+      const handleSubmit = (e) => {
+         e.preventDefault();
+         let myForm = document.getElementById("contactForm");
+         let formData = new FormData(myForm);
+         fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams(formData).toString(),
+         })
+         .then(() => console.log("Form successfully submitted"))
+         .catch((error) => alert(error));
+         }
+          
+       document
+            .querySelector("form")
+            .addEventListener("submit", handleSubmit);
+         }),[];
+   }
+   
     return (
         <section id="contact" className='container mx-auto bg-teal-500 rounded-xl mb-24'>
             <div className='p-8 py-16'>
             <h2 className="text-center text-6xl text-white mb-8">Contact Us</h2>
-            <form method="post" netlify-honeypot="bot-field" data-netlify="true" name="contact">
+            <form id="contactForm" method="post" netlify-honeypot="bot-field" data-netlify="true" name="contact">
                 <input type="hidden" name="bot-field" />
                 <input type="hidden" name="form-name" value="contact" />
                   <div className="mb-6">
@@ -88,7 +111,6 @@ const ContactForm: FC = () => {
                   </div>
                </form>
             </div>
-            
         </section>
     )
 }

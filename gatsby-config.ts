@@ -3,7 +3,7 @@ const config: GatsbyConfig = {
   siteMetadata: {
     title: "Dead Simple",
     siteUrl: "http://www.deadsimple.website",
-    description: "No-nonsense websites for small businesses"
+    description: "No-nonsense web design and development for small businesses"
   },
   plugins: ["gatsby-plugin-netlify-cms", "gatsby-plugin-postcss", "gatsby-plugin-image", "gatsby-plugin-react-helmet", "gatsby-plugin-sitemap", `gatsby-plugin-styled-components`, {
     resolve: 'gatsby-plugin-manifest',
