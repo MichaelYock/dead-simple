@@ -1,10 +1,9 @@
-/** @type {import('gatsby').GatsbyConfig} */
-module.exports = {
+import type { GatsbyConfig } from "gatsby"
+const config: GatsbyConfig = {
   siteMetadata: {
-      title: `new`,
-    siteUrl: `https://www.yourdomain.tld`
+    title: "Dead Simple",
   },
-  plugins: ["gatsby-plugin-netlify-cms", "gatsby-plugin-postcss", "gatsby-plugin-image", "gatsby-plugin-react-helmet", "gatsby-plugin-sitemap", {
+  plugins: ["gatsby-plugin-netlify-cms", "gatsby-plugin-postcss", "gatsby-plugin-image", "gatsby-plugin-react-helmet", "gatsby-plugin-sitemap", `gatsby-plugin-styled-components`, {
     resolve: 'gatsby-plugin-manifest',
     options: {
       "icon": "src/images/icon.png"
@@ -25,3 +24,4 @@ module.exports = {
     __key: "pages"
   }]
 };
+export default config
