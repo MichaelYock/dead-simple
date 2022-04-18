@@ -30,8 +30,8 @@ const ContactForm: FC = () => {
    }
    
     return (
-        <section id="contact" className='container mx-auto bg-teal-500 rounded-xl mb-24'>
-            <div className='p-8 py-16'>
+        <section id="contact" className='container mx-auto mb-24'>
+            <div className='p-16 pb-28 bg-teal-500 rounded-xl'>
             <h2 className="text-center text-6xl text-white mb-8">Contact Us</h2>
             <form id="contactForm" method="post" netlify-honeypot="bot-field" data-netlify="true" name="contact">
                 <input type="hidden" name="bot-field" />
@@ -100,19 +100,22 @@ const ContactForm: FC = () => {
                         "
                         ></textarea>
                   </div>
-                  <div>
+                  <div className="w-full text-center">
                      <button
                         type="submit"
                         className="
+                        text-xl
                         submit-btm
-                        w-full
                         text-white
-                        bg-primary
+                        bg-teal-500
                         rounded
                         border border-primary
-                        p-3
+                        p-6
+                        px-16
+                        mt-12
                         transition
-                        hover:bg-opacity-90
+                        hover:bg-white
+                        hover:text-teal-500
                         "
                         >
                      Send Message
