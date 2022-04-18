@@ -22,6 +22,7 @@ const SEO: FC = ({children}) => {
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             <meta charSet="utf-8" />
             <meta name="description" content={site.siteMetadata.description} />
+            <meta name="theme-color" content="#14B8A6"></meta>
         </Helmet>
     )
 }
