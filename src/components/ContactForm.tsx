@@ -9,12 +9,17 @@ const ContactForm: FC = () => {
          e.preventDefault();
          let myForm = document.getElementById("contactForm");
          let formData = new FormData(myForm);
+         document.getElementsByClassName("submit-btm")[0].textContent = "Sending..."
          fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: new URLSearchParams(formData).toString(),
          })
-         .then(() => console.log("Form successfully submitted"))
+         .then(() => {
+            console.log("Form successfully submitted")
+            myForm.reset()
+            document.getElementsByClassName("submit-btm")[0].textContent = "Send Message"
+         })
          .catch((error) => alert(error));
          }
           
@@ -99,6 +104,7 @@ const ContactForm: FC = () => {
                      <button
                         type="submit"
                         className="
+                        submit-btm
                         w-full
                         text-white
                         bg-primary
